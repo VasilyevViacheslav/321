@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Egor" Height="450" Width="800">
+    <Grid Margin="-1,0,0,0">
+        <Image Margin="0,-37.313,-18.222,0" Source="1640461779_32-funart-pro-p-foni-s-engri-byords-34.jpg" Stretch="Fill"/>
+        <Viewbox>
+            <Canvas Name ="DragArena" Height="450" Width="800" >
+                <Image Name="Bird"  Height="73" Source="bird.png" Stretch="Fill" Width="74" RenderTransformOrigin="0.521,0.615" VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="33" Canvas.Top="319" >
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-15.876"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </Viewbox>
+        <TextBox Name="Velocity" HorizontalAlignment="Left" Height="18.667" Margin="25.167,17.667,0,0" TextWrapping="Wrap" Text="Введите скорость" VerticalAlignment="Top" Width="105.25" TextChanged="Get_Velocity" Background="#FFBFC8FF" />
+        <TextBox Name="Angle" HorizontalAlignment="Left" Height="19" Margin="25,42,0,0" TextWrapping="Wrap" Text="Введите угол" VerticalAlignment="Top" Width="106" TextChanged="Get_Angle" Background="#FFBFC8FF"/>
+        <Button Content="Start Move" HorizontalAlignment="Left" Height="18" Margin="197,18,0,0" VerticalAlignment="Top" Width="64" Click="ButtonStartMove_Click" Background="#FF2843E6"/>
+        <TextBox x:Name="Weight" HorizontalAlignment="Left" Height="19" Margin="25,66,0,0" TextWrapping="Wrap" Text="Введите вес" VerticalAlignment="Top" Width="106" TextChanged="Get_Weight" Background="#FFBFC8FF"/>
+        <TextBox x:Name="Splitting" HorizontalAlignment="Left" Height="19" Margin="25,90,0,0" TextWrapping="Wrap" Text="Введите разделение" VerticalAlignment="Top" Width="126" TextChanged="Get_Splitting" Background="#FFBFC8FF"/>
+        <Button Content="Return" HorizontalAlignment="Left" Height="17" Margin="277,19,0,0" VerticalAlignment="Top" Width="71" Click="ButtonReturnToStart_Click" Background="#FF2843E6"/>
+    </Grid>
+</Window>
